@@ -44,33 +44,35 @@ $(document).ready(function() {
       }).then(function(response) {
           var results = response.data;
           console.log(results);
-    //       for (var i = 0; i < results.length; i++) {
-    //         var pizzaDiv = $("<div class=\"pizza-item\">");
+          for (var i = 0; i < results.length; i++) {
+            var pizzaDiv = $("<div>");
   
-    //         var rating = results[i].rating;
+            var rating = results[i].rating;
   
-    //         var p = $("<p>").text("Rating: " + rating);
+            var p = $("<p>").text("Rating: " + rating);
+
+            var pizzaImage = $("#pizza-image");
+    //
+    // var animated = results[i].images.fixed_height.url;
+            var still = results[i].images.fixed_height_still.url;
   
-    //         var animated = results[i].images.fixed_height.url;
-    //         var still = results[i].images.fixed_height_still.url;
-  
-    //         var pizzaImage = $("<img>");
-    //         pizzaImage.attr("src", still);
-    //         pizzaImage.attr("data-still", still);
+    //         
+            pizzaImage.attr("src", still);
+            pizzaImage.attr("data-still", still);
     //         pizzaImage.attr("data-animate", animated);
-    //         pizzaImage.attr("data-state", "still");
-    //         pizzaImage.addClass("pizza-image");
+            pizzaImage.attr("data-state", "still");
+            pizzaImage.addClass("pizza-image");
   
   
-    //         pizzaDiv.append(p);
-    //         pizzaDiv.append(pizzaImage);
+            pizzaDiv.append(p);
+            pizzaDiv.append(pizzaImage);
   
-    //         $("#pizzas").append(pizzaDiv);
-    //       }
-    //     });
-    // });
+            $("#pizzas").append(pizzaDiv);
+          }
+        });
+    });
   
-    // $(document).on("click", ".pizza-image", function() {
+    $(document).on("click", "#pizza-image", function() {
   
     //   var state = $(this).attr("data-state");
   
@@ -82,7 +84,7 @@ $(document).ready(function() {
     //     $(this).attr("src", $(this).attr("data-still"));
     //     $(this).attr("data-state", "still");
     //   }
-    // });
+    });
   
     // $("#add-pizza").on("click", function(event) {
     //   event.preventDefault();
@@ -94,8 +96,8 @@ $(document).ready(function() {
   
     //   // populateButtons(pizzas, "pizza-button", "#pizza-buttons");
   
-    });
-});
+//     });
+// });
     
   
   
