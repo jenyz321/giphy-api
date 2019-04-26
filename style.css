@@ -3,15 +3,18 @@ body {
     background: #eee;
   }
   
-  #animals {
+  #pizza {
     width: 70%;
   }
   
-  .animal-item {
+  .pizza-item {
     float: left;
     padding: 10px;
   }
   
+  h1 {
+    text-align: center;
+  }
   form {
     float: right;
     width: 30%;

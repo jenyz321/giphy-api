@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <title>Animaltastic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pizza, Pizza, Pizza!</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
+  <div class="container">
+    <h1>Find your pizza!</h1>
+<!-- pizza buttons  -->
+  <div id="pizza-button"></div>
 
-  <div id="animal-buttons">
+  <div id="buttons-view"></div>
+  <div id="images"></div>
 
-  </div>
-
-  <form id="animal-form">
-    <label for="animal-input">Add an animal</label>
-    <input type="text" id="animal-input"><br>
-    <input id="add-animal" type="submit" value="Submit">
+  <form id="pizza-form">
+    <label for="pizza-input">Add a yummy, yummy pizza</label>
+    <input type="text" id="pizza-input"><br>
+    <input id="add-pizza" type="submit" value="Yum Yum">
   </form>
-
-  <div id="animals">
+<!-- pizzas go here -->
+  <div id="pizzas"></div>
 
   </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="giphy.js"></script>
   
